@@ -17,10 +17,10 @@ export default function Home() {
 
 const Wrapper = styled.div`
  height: 100vh; 
+ width: 100vw; 
  justify-content: center;
  align-items: center;
  display: grid;
- overflow: hidden;
  display: flex; 
 `
 
@@ -36,10 +36,12 @@ overflow: hidden;`
 
 const VideoBackground= styled.video`
 position: absolute; 
-height: 100vh; 
+height: 100vh;
+width: 100vw; 
 z-index: -10;
 o-object-fit: cover;
 object-fit: cover;
+overflow: hidden;
 `
 const ButtonContainer = styled.div`
  justify-content: center;
