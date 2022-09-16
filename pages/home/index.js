@@ -25,7 +25,7 @@ function index() {
 export default index
 
 const Wrapper = styled.div`
-background-image: url("https://static.vecteezy.com/system/resources/previews/002/411/677/non_2x/white-background-with-gold-accents-free-vector.jpg");
+background-image: url("https://media.istockphoto.com/vectors/abstract-geometric-pattern-background-white-polygon-mosaic-shape-vector-id1165507348?k=20&m=1165507348&s=612x612&w=0&h=83jWMhfTHb0THcINDQgowbOuoqPVz6AfLvmaEvNjNgY=");
 background-repeat: no-repeat;
 background-size: cover;
  display: grid;
