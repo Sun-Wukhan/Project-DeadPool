@@ -7,6 +7,11 @@ function Navbar() {
           <NavLogo>
             <img src={"images/webguru.png"} alt="Company Logo" />
           </NavLogo>
+          <NavMenu>
+            <NavButton>Logout</NavButton>
+            <NavButton>Settings</NavButton>
+            <NavButton>Contact Us</NavButton>
+          </NavMenu>
     </NavBar>
   )
 }
@@ -18,7 +23,7 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 0;
   height: 5rem;
@@ -29,4 +34,19 @@ const NavBar = styled.nav`
 `;
 
 const NavLogo = styled.div``;
+
+const NavMenu = styled.div`
+display: flex; 
+align-items: center; 
+margin-right: -15px;
+`;
+
+const NavButton = styled.div`
+display: flex; 
+align-items: center; 
+margin-right: 2rem;
+font-weight: 700;
+z-index: 10;
+cursor: pointer;
+`
 

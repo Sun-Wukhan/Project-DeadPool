@@ -2,8 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Sidebar from '../components/Sidebar'
 import Navbar from '../components/Navbar'
-import Tile from '../components/Tile'
-import Card from '../components/Card'
+import Card from './Card'
 
 function index() {
   return (
@@ -26,6 +25,9 @@ function index() {
 export default index
 
 const Wrapper = styled.div`
+background-image: url("https://static.vecteezy.com/system/resources/previews/002/411/677/non_2x/white-background-with-gold-accents-free-vector.jpg");
+background-repeat: no-repeat;
+background-size: cover;
  display: grid;
   height: 100vh;
   width: 100%;
@@ -39,18 +41,19 @@ const Wrapper = styled.div`
   text-align: center;
   grid-gap: 0.25rem;
   transition: all 0.25s ease-in-out;
-  
+/*   
   @media (max-width: 550px) {
     grid-template-columns: 1fr;
     grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1fr;
     grid-template-areas:
       "nav"
-      "sidebar"
       "main"
       "content"
-      "footer";
+      "sidebar";
   }
-  color: white;`
+  color: white; */
+  
+  `
 
 const NavBar = styled.nav`
   grid-area: nav;
@@ -58,7 +61,9 @@ const NavBar = styled.nav`
 const Main = styled.main`
   grid-area: main;
   margin: 2rem 1rem 1rem 1rem;
-  background-image: url("/images/puppyswim.jpg");
+  background-image: url("https://www.centeredrecoveryprograms.com/wp-content/uploads/2017/12/you-are-here-map-pin-location-navigation-3-d-animation_s68bji6we_thumbnail-full08.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   align-items: center; 
   justify-content: center;
   border-radius: 2rem;
@@ -92,6 +97,11 @@ const Content1 = styled.div`
   padding: 0.25rem;
   width: 100%; 
   height: 100%; 
+  
+  @media (max-width: 550px) {
+    display: flex;
+    flex-direction: column;
+  }
 
 `;
 
