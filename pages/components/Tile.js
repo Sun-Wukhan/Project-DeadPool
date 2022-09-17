@@ -4,9 +4,9 @@ import styled from "styled-components";
 function Tile({title, explanation, date}) {
   return (
     <Wrapper>
-      <Title>{title}</Title>
-      <Explain>{explanation}</Explain>
-      <Explain>{date}</Explain>
+      <Title>yes</Title>
+      <Explain>yes</Explain>
+      <Explain>yes</Explain>
       <Explain>$$$</Explain>
       <Explain>Like</Explain>
     </Wrapper>

@@ -2,17 +2,13 @@ import { useState } from "react";
 import styled from "styled-components";
 import Link from 'next/link'
 import { navItems } from "../../static/navItems";
+import Tile from '../components/Tile'
 
-const Sidebar = () => {
-  const [activeIcon, setActiveIcon] = useState(navItems[0].title);
+function SideBar() {
+    const [activeIcon, setActiveIcon] = useState(navItems[0].title);
 
   return (
     <Wrapper>
-      <LogoContainer>
-        <Logo>
-          <img src={"images/webguru.png"} alt="WebGuru Logo" />
-        </Logo>
-      </LogoContainer>
       <NavItemsContainer>
         {navItems.map((item) => (
           <Link href={"/"+item.link}>
@@ -20,40 +16,30 @@ const Sidebar = () => {
             <NavIcon style={{ color: item.title === activeIcon && "orangered" }}>
               {item.icon}
             </NavIcon>
-            <NavTitle>{item.title}</NavTitle>
+            <NavTitle onClick={() => setActiveIcon(item.title)} style={{ color: item.title === activeIcon && "orangered"}}>{item.title}</NavTitle>
           </NavItem>
           </Link>
         ))}
       </NavItemsContainer>
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Sidebar;
+export default SideBar
 
 const Wrapper = styled.div`
-  /* height: calc(100%); */
-  border-right: 1px solid black;
-  flex: 0.5;
-  /* width: calc(20rem - 10px - 10px); */
-  /* padding: 0 1rem; */
-`;
+width: 14rem; 
+height: 100%;
+float: left;
 
-const LogoContainer = styled.div`
-  margin: 1.5rem 0;
-`;
-
-const Logo = styled.div`
-  width: 44%;
-  object-fit: contain;
-  border-radius: 60%;
-  margin-left: 1.5rem;
-  border-bottom: 1px solid black;
-`;
+`
 
 const NavItemsContainer = styled.div`
-/* border-top: 1px solid black; */
-  margin-top: 1rem;
+margin-top: 0.5rem;
+border-radius: 10px;
+border-right: 1px solid grey;
+border-bottom: 1px solid grey;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   &:hover {
     cursor: pointer;
   }
@@ -61,16 +47,16 @@ const NavItemsContainer = styled.div`
 
 const NavItem = styled.div`
   display: flex;
+  color: white;
   align-items: center;
   font-size: 1.3rem;
   font-weight: 500;
   border-radius: 0.5rem;
   margin-bottom: 1.5rem;
   height: 4rem;
-  color: black;
 
   &:hover {
-    background-color: darkgrey;
+    background-color: #303946;
   }
 `;
 

@@ -15,7 +15,7 @@ export const navItems = [
     icon: <RiHomeSmileLine />,
   },
   {
-    title: 'My Campaign',
+    title: 'Campaign',
     link: 'campaign',
     icon: <MdCampaign/>,
   },
@@ -25,7 +25,7 @@ export const navItems = [
     icon: <MdTrendingUp/>,
   },
   {
-    title: 'My Funds',
+    title: 'Funds',
     link: 'funds',
     icon: <RiRefund2Line/>,
   },
@@ -40,13 +40,13 @@ export const navItems = [
     icon: <MdForum/>,
   },
   {
-    title: 'Report Bug',
+    title: 'Report',
     link: 'report',
     icon: <AiFillBug/>,
   },
   {
-    title: 'Submit Proof',
-    link: 'submit',
+    title: 'Proof',
+    link: 'proof',
     icon: <GiArchitectMask/>,
   },
 ]

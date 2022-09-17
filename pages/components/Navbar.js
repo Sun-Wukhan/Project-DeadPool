@@ -7,11 +7,6 @@ function Navbar() {
           <NavLogo>
             <img src={"images/webguru.png"} alt="Company Logo" />
           </NavLogo>
-          <NavMenu>
-            <NavButton>Logout</NavButton>
-            <NavButton>Settings</NavButton>
-            <NavButton>Contact Us</NavButton>
-          </NavMenu>
     </NavBar>
   )
 }
@@ -19,11 +14,11 @@ function Navbar() {
 export default Navbar
 
 const NavBar = styled.nav`
-  position: fixed;
+position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 100%;
   top: 0;
   left: 0;
   height: 5rem;
