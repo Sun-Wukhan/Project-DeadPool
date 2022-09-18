@@ -19,10 +19,12 @@ display: flex;
 flex-direction: row;
 height: 20rem;
 width: 100%;
-margin: 2rem;
+margin: 0.5rem;
 
 @media (max-width: 768px) {
-    display: flex;
-    flex-direction: column;
-    
-  }`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  }
+`

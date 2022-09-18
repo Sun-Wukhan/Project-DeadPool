@@ -36,16 +36,24 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  overflow-x: scroll;
+  width: calc(100%);
   height: 5rem;
   background-color: black;
   color: white;
   text-decoration: none;
   padding: 0 2rem;
-  overflow: auto;
+  top:0;
+  left:0;
 
   &::-webkit-scrollbar {
     display: none;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%; 
+    background-color: black;
+    
   }
 `;
 
@@ -58,6 +66,7 @@ const NavMenu = styled.div`
 
 const NavButton = styled.div`
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   margin-right: 2rem;
   font-weight: 700;

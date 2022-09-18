@@ -2,7 +2,6 @@ import { useState } from "react";
 import styled from "styled-components";
 import Link from 'next/link'
 import { navItems } from "../../static/navItems";
-import Tile from '../components/Tile'
 
 function SideBar() {
     const [activeIcon, setActiveIcon] = useState(navItems[0].title);
@@ -28,10 +27,9 @@ function SideBar() {
 export default SideBar
 
 const Wrapper = styled.div`
-width: 14rem; 
+width: 15%; 
 height: 100%;
 float: left;
-
 `
 
 const NavItemsContainer = styled.div`
@@ -65,9 +63,14 @@ const NavIcon = styled.div`
   color: white;
   padding: 0.7rem;
   border-radius: 50%;
-  margin: 0 1rem;
-  display: grid;
+  margin: 0 10px;
+  /* display: grid; */
   place-items: center;
 `;
 
-const NavTitle = styled.div``;
+const NavTitle = styled.div`
+
+@media (max-width: 768px) {
+  display: none;
+  }
+`;

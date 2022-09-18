@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import Navbar from "./components/Navbar";
+import Navbar from "../pages/home/Navbar";
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -16,10 +17,9 @@ export default function Home() {
       </VideoWrapper>
 
       <ContentBanner>
-      <Navbar/>
       <Title>Project Deadpool</Title>
         <ButtonContainer>
-          <MediaButton>Google Login</MediaButton>
+          <Link href="/home"><MediaButton>Google Login</MediaButton></Link>
           <MediaButton>Facebook Login</MediaButton>
           <MediaButton>Twitter Login</MediaButton>
         </ButtonContainer>
